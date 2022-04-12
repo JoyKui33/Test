@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .Progress_Status {
+    width: 50%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    }
+    .Progress_Bar {    
+    width: 50%;
+    height: 20px;
+    border: 1px solid #c7c7c7;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    }
+    
+    
+    </style>
+<body>
+    <h3>Progress Bar</h3>
+    <div class="Progress_Status">
+    <div class="Progress_Bar" style="background-color: #bfee90">50%</div>
+    </div>
+    <div class="Progress_Status">
+    <div class="Progress_Bar" style="background-color: red">50%</div>
+    </div>
+    <div class="Progress_Status">
+    <div class="Progress_Bar"  style="background-color:white">50%</div>
+    </div>
+    <div class="Progress_Status">
+    <div class="Progress_Bar" style="background-color: blue">50%</div>
+    </div>
+    <div class="Progress_Status">
+    <div class="Progress_Bar" style="background-color: yellow">50%</div>
+        </div>
+    
+    <br>
+    <button onclick="update()">Finish</button>
+    
+    <script>
+    
+    function update() {
+    var element = document.getElementsByClassName('Progress_Bar');
+    var width = 50;
+    console.log(element)
+    var identity = setInterval(scene, 10);
+    function scene() {
+    if (width >= 100) {
+    clearInterval(identity);
+    } else {
+    widthh++;
+    element.style.width = width + '%';
+    element.innerHTML = width * 1 + '%';
+    }
+    }
+    }
+    
+    </script>
+     
+</body>
+</html>
